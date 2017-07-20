@@ -1,0 +1,10 @@
+include
+$(RWSP_HOME)\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\include\
+
+lib include
+$(RWSP_HOME)\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\lib
+
+i18n12s.lib
+icuuc.lib
+
+functor_list anf Thread libs also

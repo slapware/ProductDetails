@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{36BAE0A1-A2A0-4A49-B4D0-E1007D2735A8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0600;WIN32_LEAN_AND_MEAN;WIN32;_DEBUG;_CONSOLE;MARKUP_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(CGICC);$(RWSP_HOME);$(MYSQL)include;D:\RogueWave\SourcePro\11.1\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)/$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalDependencies>cgicc.lib;dbt15s.lib;msq15s.lib;odbc32.lib;rwmsq15s.obj;ws2_32.lib;tls15s.lib;functor15s.lib;pointer15s.lib;sync15s.lib;itc15s.lib;threxcept15s.lib;thread15s.lib;functor_list15s.lib;internet15s.lib;network15s.lib;http15s.lib;streams15s.lib;i18n15s.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <AdditionalLibraryDirectories>$(CGICC)/win/Debug;$(RWSP_HOME)/lib;$(MYSQL)/lib/debug;D:\RogueWave\SourcePro\11.1\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0600;WIN32_LEAN_AND_MEAN;WIN32;NDEBUG;_CONSOLE;MARKUP_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(CGICC);$(RWSP_HOME);$(MYSQL)include;$(RWSP_HOME)\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OutputFile>$(OutDir)/$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalDependencies>cgicc.lib;dbt12s.lib;msq12s.lib;odbc32.lib;rwmsq12s.obj;ws2_32.lib;tls12s.lib;functor12s.lib;functor_list12s.lib;pointer12s.lib;sync12s.lib;itc12s.lib;threxcept12s.lib;thread12s.lib;internet12s.lib;network12s.lib;http12s.lib;streams12s.lib;i18n12s.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <AdditionalLibraryDirectories>$(CGICC)/win/Release;$(RWSP_HOME)/lib;$(MYSQL)/lib/opt;$(RWSP_HOME)\3rdparty\icu-4.4.1\windows\ia32-msvc10.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BisacDB.cpp" />
+    <ClCompile Include="CategoryDB.cpp" />
+    <ClCompile Include="ContentDB.cpp" />
+    <ClCompile Include="ContributorDB.cpp" />
+    <ClCompile Include="DbFace.cpp" />
+    <ClCompile Include="Markup.cpp" />
+    <ClCompile Include="MsSqlHandle.cpp" />
+    <ClCompile Include="MsSqlImp.cpp" />
+    <ClCompile Include="ProductDetails.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BisacDB.h" />
+    <ClInclude Include="CategoryDB.h" />
+    <ClInclude Include="ContentDB.h" />
+    <ClInclude Include="ContributorDB.h" />
+    <ClInclude Include="DbFace.h" />
+    <ClInclude Include="Markup.h" />
+    <ClInclude Include="MsSqlHandle.h" />
+    <ClInclude Include="MsSqlImp.h" />
+    <ClInclude Include="SlapOut.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AA_Web.config" />
+    <None Include="DDR_Web.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

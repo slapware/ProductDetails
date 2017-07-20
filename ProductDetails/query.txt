@@ -1,0 +1,11 @@
+SELECT Product_Group_ID, Ages,Best_Seller_Flag, Catalog_Name,
+Editorial_Imprint, CoverImageURL_Large, CoverImageURL_Medium, 
+CoverImageURL_MediumLarge, CoverImageURL_Small, Format, 
+Future_Release_Flag, Grade_End, Grade_Start, Has_Essay,Imprint, ISBN,
+Locale_Desc, Max_Age, Min_Age, New_Release_Flag, No_of_Reviews,
+Num_Of_Pages, On_Sale_Date, Price, Product_Group_SEO_Copy,
+Product_Group_Title, Reading_Level, Release_Date, Sales_Marketing_Code, 
+Series,Sub_Format, Subtitle, Title,Volume 
+FROM dbo.v_Product_Detail 
+WHERE Default_Locale_Flag = 'Y' 
+AND ISBN = '9780061950711'
